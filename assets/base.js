@@ -1,4 +1,4 @@
-// Source Code: https://github.com/BinBashBanana/webretro
+	// Source Code: https://github.com/BinBashBanana/webretro
 // please dont use IE
 var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 if (!window.fetch || !indexedDB) {
@@ -147,7 +147,7 @@ try {
 
 // query string into object
 var queries = Object.fromEntries(window.location.search.substring(1).split("&").map(i => i.split("=")).map(i => i.map(i => i && decodeURIComponent(i))));
-
+queries.core = "autodetect"
 // core lists
 function sortArray(array, sortTo) {
 	var orig = array.map(i => sortTo[i].toLowerCase());
